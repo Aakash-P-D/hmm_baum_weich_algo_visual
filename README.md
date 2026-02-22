@@ -40,6 +40,13 @@ http://127.0.0.1:5000
 Enter Observed Sequence (comma-separated) and Number of Hidden States, then click Run.
 
 ---
+## OUTPUT EXAMPLE 
+
+![Matrices Example](matrices.png)
+
+---
+
+![Matrices Example](stateDiagram.png)
 
 ## File Structure
 ```
