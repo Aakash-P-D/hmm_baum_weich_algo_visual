@@ -16,28 +16,51 @@ It allows the user to:
 
 ---
 
-## How to Run
+> [!IMPORTANT]
+> How to Run
+>
+> 1. Clone or download the repository.  
+>
+> 2. Install Python dependencies:
+>
+>
+> ```python
+> pip install flask numpy graphviz
+> ```
+> Make sure Graphviz is installed and added to the system PATH.
+>
+> 👉 https://graphviz.org/download/
+>
+> Run the Flask app:
+>
+> ```python
+> python app.py
+> ```
+> Open your browser and go to:
+>
+> 👉 http://127.0.0.1:5000
 
-1. Clone or download the repository.  
+<table>
+<tr>
+<td>
 
-2. Install Python dependencies:
+### 🔴 Important
+> User must enter the observation sequence and the number of hidden states in the web interface.
+> Then click `Run`
+##
 
+### 🟢 Tip
+> Example:    
+> Observation Sequence: `0 1 0 1`
+> Hidden States: `4`
+##
 
-```python
-pip install flask numpy graphviz
-```
-Make sure Graphviz is installed and added to the system PATH.
+### 🟠 Warning
+> Do not leave input fields empty.
 
-Run the Flask app:
-
-```python
-python app.py
-```
-Open your browser and go to:
-
-http://127.0.0.1:5000
-
-Enter Observed Sequence (comma-separated) and Number of Hidden States, then click Run.
+</td>
+</tr>
+</table>
 
 ---
 ## OUTPUT EXAMPLE 
@@ -47,6 +70,8 @@ Enter Observed Sequence (comma-separated) and Number of Hidden States, then clic
 ---
 
 ![Matrices Example](stateDiagram.png)
+
+---
 
 ## File Structure
 ```
@@ -66,13 +91,13 @@ hmm_baum_weich_visual/
 
  # Features
 
-Input validation (no empty fields, hidden states must be an integer)
+- Input validation (no empty fields, hidden states must be an integer)
 
-Shows matrices A, B, π and P(O|λ)
+- Shows matrices A, B, π and P(O|λ)
 
-Generates state transition diagram (state_diagram.png) in static/ folder
+- Generates state transition diagram (state_diagram.png) in static/ folder
 
-Ready for future iterations visualization and advanced UI enhancements
+- Ready for future iterations visualization and advanced UI enhancements
 
 
 ---
@@ -220,3 +245,104 @@ form input[type="submit"] {
 ```javascript
 console.log("HMM Visualizer Loaded!");
 ```
+
+---
+
+# Future Enhancements
+
+`Interactive Animation of HMM`  
+  - Animate the state transitions step by step to show how the algorithm converges over iterations.
+
+`Multiple Observation Sequences`
+  - Allow users to input multiple sequences simultaneously and compare state estimations.
+
+`Export Results`
+ 
+   Enable download of:
+  - Transition & emission matrices as CSV/Excel
+  - State transition diagrams as PNG or PDF
+  - Probability evolution plots
+
+`Customizable HMM Parameters` 
+  Let users modify:
+  - Convergence threshold
+  - Maximum number of iterations
+  - Initial random distributions
+
+`Integration with Datasets`
+  Support real-world datasets for applications such as:
+  - Weather prediction
+  - Stock trend analysis
+  - Speech recognition
+
+`User Authentication & Session Tracking` 
+  - Save each user’s results and visualizations for later review.
+
+`Enhanced UI/UX` 
+  - Use CSS/JS frameworks like Bootstrap or Tailwind for responsive design.  
+  - Add interactive graphs using Plotly or D3.js.
+
+`Mobile-Friendly Version`
+  - Make the web interface accessible and usable on tablets and smartphones.
+
+`AI-Powered Recommendations`
+  - Suggest hidden state counts or optimal parameters based on user input or dataset patterns.
+  
+---
+
+## Applications of HMM
+
+Hidden Markov Models are widely used in various fields where **sequential data** or **time series patterns** are important. Some applications include:
+
+`Speech Recognition`
+ 
+  - HMMs model sequences of spoken words or phonemes to convert audio into text.
+
+`Natural Language Processing (NLP)`
+   
+  - Part-of-speech tagging, named entity recognition, and language modeling use HMMs to predict sequences of words or  tags.
+
+`Bioinformatics`
+  
+  - Modeling DNA, RNA, or protein sequences to find patterns, motifs, or gene predictions.
+
+`Stock Market & Financial Modeling`
+   
+  - Predicting trends or hidden market states based on observable data.
+
+`Weather Prediction`
+    
+  - Inferring hidden weather states (sunny, rainy, cloudy) from observable conditions (temperature, humidity).
+
+`Handwriting Recognition`
+  
+  - Recognizing sequences of pen strokes or handwritten characters.
+
+`Robot Navigation & Localization`
+    
+  - Estimating robot positions or paths when only partial observations are available.
+
+`Anomaly Detection`
+  
+   - Detecting unusual patterns in sequences, such as fraud in transactions or system faults.
+
+`Gesture Recognition`
+   - Recognizing human gestures from sequences of sensor or video data.
+   
+```HMMs are versatile for any scenario where there’s a sequence of observations influenced by hidden states.```
+
+---
+
+## Author
+
+`Aakash P D` 
+
+`B.Tech CSE`
+
+`GEC Thrissur`
+
+
+---
+
+## License
+This project is licensed under `MIT License`
